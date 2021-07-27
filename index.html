@@ -31,23 +31,16 @@
         document.addEventListener("DOMContentLoaded", function(event) {
         var appLang = localStorage.getItem('lang')||userLang.substr(0,2);
 
-        // if no language value saved in local-storage, set en as default
-        if(appLang === null && userLang.substr(0,2)!='pt'){
-            localStorage.setItem('lang', 'en'); // updaet local-storage
 
-            // fun contentUpdate function with en value
-            contentUpdate('en'); 
+            
+            localStorage.setItem('lang', appLang); // updaet local-storage
 
-            // select radiobutton which has data-value = en
-            document.querySelector('[data-value="en"]').checked = true; 
-        }
-        else{
             // fun contentUpdate function with value from local-storage - en, ru..
             contentUpdate(appLang); 
 
             // select radiobutton which has data-value == local storage value
             document.querySelector('[data-value="'+appLang+'"]').checked = true;
-        }
+        
         });
 
         // change innerhtml on radiobtn click
