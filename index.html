@@ -10,7 +10,7 @@
         //test navigator language
 
         var userLang = navigator.language || navigator.userLanguage; 
-        alert ("The language is: " + userLang);
+        //alert ("The language is: " + userLang.s);
     
         // json
         var langJSON = {
@@ -29,10 +29,10 @@
 
         // run function after page load :: get/set localstorage value and run function
         document.addEventListener("DOMContentLoaded", function(event) {
-        var appLang = localStorage.getItem('lang');
+        var appLang = localStorage.getItem('lang')||userLang.substr(0,2);
 
         // if no language value saved in local-storage, set en as default
-        if(appLang === null){
+        if(appLang === null && userLang.substr(0,2)!='pt'){
             localStorage.setItem('lang', 'en'); // updaet local-storage
 
             // fun contentUpdate function with en value
