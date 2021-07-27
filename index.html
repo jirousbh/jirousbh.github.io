@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Site Multi Lingue</title>
+
+    <script>
+        //test navigator language
+
+        var userLang = navigator.language || navigator.userLanguage; 
+        alert ("The language is: " + userLang);
+    
+        // json
+        var langJSON = {
+        "en" : {
+            "title"     : "My Project",
+            "greeting"  : "Welcome to ...",
+            "subtitle"  : "This is my project",
+        },
+
+        "pt" : {
+            "title"     : "Meu Projeto",
+            "greeting"  : "Bem-vindo...",
+            "subtitle"  : "Este é meu projeto",
+        }
+        }
+
+        // run function after page load :: get/set localstorage value and run function
+        document.addEventListener("DOMContentLoaded", function(event) {
+        var appLang = localStorage.getItem('lang');
+
+        // if no language value saved in local-storage, set en as default
+        if(appLang === null){
+            localStorage.setItem('lang', 'en'); // updaet local-storage
+
+            // fun contentUpdate function with en value
+            contentUpdate('en'); 
+
+            // select radiobutton which has data-value = en
+            document.querySelector('[data-value="en"]').checked = true; 
+        }
+        else{
+            // fun contentUpdate function with value from local-storage - en, ru..
+            contentUpdate(appLang); 
+
+            // select radiobutton which has data-value == local storage value
+            document.querySelector('[data-value="'+appLang+'"]').checked = true;
+        }
+        });
+
+        // change innerhtml on radiobtn click
+        function changeLang(langVal){
+        // set local-storage lang value from value given in onchange="changeLang(value)"
+        localStorage.setItem('lang', langVal);
+
+        // fun contentUpdate function with value from onchange="changeLang(value)"
+        contentUpdate(langVal);
+        }
+
+        // content/innerhtml update/assign
+        function contentUpdate(cl){
+        // get current langage contents in array
+        var currLang = Object.entries(langJSON)[Object.keys(langJSON).indexOf(cl)][1],
+            // get current language content array length
+            langCont = Object.entries(currLang).length;
+
+        for(let i = 0; i < langCont; i++){
+            // get selectors which has .langchange classes
+            var getSelector = document.querySelectorAll('.langchange')[i],
+                // get data-key attribute from .langchange class selectors
+                getAttr = getSelector.getAttribute('data-key');
+
+            // assign the data-key value from current language array to the .langchange[data-key] selector
+            getSelector.innerHTML = currLang[getAttr];
+        }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="brand">
+          <h1 class="langchange title-1" data-key="title"></h1>
+          <h4 class="langchange title-2" data-key="greeting"></h4>
+          <h4 class="langchange title-3" data-key="subtitle"></h4>
+        </div>
+      </div>
+      
+      <div>
+          <input type="radio" id="lang_en" name="lang" data-value="en" onchange="changeLang('en');" />
+          <label for="lang_en">Lang EN</label>
+          
+          <input type="radio" id="lang_ru" name="lang" data-value="ru" onchange="changeLang('ru');" />
+          <label for="lang_ru">Lang RU</label>
+      </div>
+</body>
+</html>
