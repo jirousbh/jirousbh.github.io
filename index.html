@@ -18,12 +18,14 @@
             "title"     : "My Project",
             "greeting"  : "Welcome to ...",
             "subtitle"  : "This is my project",
+            "flag"      : "en.png"
         },
 
         "pt" : {
             "title"     : "Meu Projeto",
             "greeting"  : "Bem-vindo...",
             "subtitle"  : "Este é meu projeto",
+            "flag"      : "br.png"
         }
         }
 
@@ -68,8 +70,13 @@
                 // get data-key attribute from .langchange class selectors
                 getAttr = getSelector.getAttribute('data-key');
 
+            // test if the selector is image
+            if(getSelector.nodeName.toLowerCase() === 'img'){
+                getSelector.src='img/'+currLang[getAttr];
+            }else{
             // assign the data-key value from current language array to the .langchange[data-key] selector
             getSelector.innerHTML = currLang[getAttr];
+            }
         }
         }
     </script>
@@ -81,6 +88,9 @@
           <h4 class="langchange title-2" data-key="greeting"></h4>
           <h4 class="langchange title-3" data-key="subtitle"></h4>
         </div>
+      </div>
+      <div>
+          <img src="img/en.png" class="langchange flag" data-key="flag">
       </div>
       
       <div>
