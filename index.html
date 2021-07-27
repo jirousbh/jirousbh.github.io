@@ -33,7 +33,7 @@
         document.addEventListener("DOMContentLoaded", function(event) {
             var appLang = localStorage.getItem('lang');
 
-            if (userLang.substr(0,2)=='pt')
+            if (userLang.substr(0,2)=='pt' && appLang === null)
                 appLang='pt';
             else if (appLang === null)   
                 appLang='en';
