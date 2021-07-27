@@ -29,11 +29,14 @@
 
         // run function after page load :: get/set localstorage value and run function
         document.addEventListener("DOMContentLoaded", function(event) {
-        var appLang = localStorage.getItem('lang')||userLang.substr(0,2);
+            var appLang = localStorage.getItem('lang');
 
-
+            if (userLang.substr(0,2)=='pt')
+                appLang='pt';
+            else if (appLang === null)   
+                appLang='en';
             
-            localStorage.setItem('lang', appLang); // updaet local-storage
+            localStorage.setItem('lang', appLang); // update local-storage
 
             // fun contentUpdate function with value from local-storage - en, ru..
             contentUpdate(appLang); 
@@ -82,10 +85,10 @@
       
       <div>
           <input type="radio" id="lang_en" name="lang" data-value="en" onchange="changeLang('en');" />
-          <label for="lang_en">Lang EN</label>
+          <label for="lang_en">Inglês</label>
           
-          <input type="radio" id="lang_ru" name="lang" data-value="ru" onchange="changeLang('pt');" />
-          <label for="lang_ru">Lang PT</label>
+          <input type="radio" id="lang_ru" name="lang" data-value="pt" onchange="changeLang('pt');" />
+          <label for="lang_ru">Português</label>
       </div>
 </body>
 </html>
