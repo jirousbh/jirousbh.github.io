@@ -49,7 +49,7 @@
             .then(response=> response.json())
             .then(langJSON => {
                         // get current langage contents in array
-            var currLang = [Object.keys(langJSON).indexOf(cl)][1],
+            var currLang = [Object.keys(langJSON)][1],
             // get current language content array length
             langCont = Object.entries(currLang).length;
 
