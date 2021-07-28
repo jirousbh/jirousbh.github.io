@@ -5,29 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste Site Multi Lingue</title>
-
     <script>
         //test navigator language
 
         var userLang = navigator.language || navigator.userLanguage; 
         //alert ("O idioma do navegador é: " + userLang.substr(0,2));
     
-        // json
-        var langJSON = {
-        "en" : {
-            "title"     : "Multi Language Site",
-            "greeting"  : "Welcome to ...",
-            "subtitle"  : "This is Multi Language Site test using only javascript",
-            "flag"      : "en.png"
-        },
 
-        "pt" : {
-            "title"     : "Site Multi Língue",
-            "greeting"  : "Bem-vindo...",
-            "subtitle"  : "Esse é um teste de site Multi Língue usando somente javascript",
-            "flag"      : "br.png"
-        }
-        }
 
         // run function after page load :: get/set localstorage value and run function
         document.addEventListener("DOMContentLoaded", function(event) {
@@ -59,12 +43,17 @@
 
         // content/innerhtml update/assign
         function contentUpdate(cl){
-        // get current langage contents in array
-        var currLang = Object.entries(langJSON)[Object.keys(langJSON).indexOf(cl)][1],
+           // alert(cl);
+        // get language json file
+        fetch('./lang/pt.json')
+            .then(response=> response.json())
+            .then(langJSON => {
+                        // get current langage contents in array
+            var currLang = [Object.keys(langJSON).indexOf(cl)][1],
             // get current language content array length
             langCont = Object.entries(currLang).length;
 
-        for(let i = 0; i < langCont; i++){
+            for(let i = 0; i < langCont; i++){
             // get selectors which has .langchange classes
             var getSelector = document.querySelectorAll('.langchange')[i],
                 // get data-key attribute from .langchange class selectors
@@ -78,6 +67,11 @@
             getSelector.innerHTML = currLang[getAttr];
             }
         }
+
+            })
+
+
+
         }
     </script>
 </head>
