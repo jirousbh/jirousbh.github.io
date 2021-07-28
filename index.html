@@ -64,10 +64,10 @@
 
             // test if the selector is image
             if(getSelector.nodeName.toLowerCase() === 'img'){
-                getSelector.src='img/'+currLang[getAttr];
+                getSelector.src='img/'+langJSON[getAttr];
             }else{
             // assign the data-key value from current language array to the .langchange[data-key] selector
-            getSelector.innerHTML = currLang[getAttr];
+            getSelector.innerHTML = langJSON[getAttr];
             }
         }
 
