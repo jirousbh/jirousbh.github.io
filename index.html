@@ -50,9 +50,11 @@
             .then(langJSON => {
                         // get current langage contents in array
             //var currLang = [Object.keys(langJSON)][1],
-            var currLang = JSON.parse(langJSON);
+            //var currLang = JSON.parse(langJSON);
             // get current language content array length
-            langCont = currLang.length; //Object.entries(currLang).length;
+            langCont = Object.keys(langJSON).length; //Object.entries(currLang).length;
+            
+            alert(langCont);
 
             for(let i = 0; i < langCont; i++){
             // get selectors which has .langchange classes
