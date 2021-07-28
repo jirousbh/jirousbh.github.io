@@ -45,7 +45,7 @@
         function contentUpdate(cl){
            // alert(cl);
         // get language json file
-        fetch('./lang/pt.json')
+        fetch('./lang/'+cl+'.json')
             .then(response=> response.json())
             .then(langJSON => {
                         // get current langage contents in array
@@ -54,7 +54,7 @@
             // get current language content array length
             langCont = Object.keys(langJSON).length; //Object.entries(currLang).length;
             
-            alert(langCont);
+            //alert(langCont);
 
             for(let i = 0; i < langCont; i++){
             // get selectors which has .langchange classes
