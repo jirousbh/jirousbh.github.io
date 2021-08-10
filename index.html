@@ -83,15 +83,15 @@
       <ul class="navbar-nav ms-auto align-items-sm-center">
       <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Selecionar Idioma
+            <img src="src/imgs/bandeira-brasil.svg" alt=""> Português
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#"><img src="src/imgs/bandeira-brasil.svg" alt=""></a></li>
-            <li><a class="dropdown-item" href="#"><img src="src/imgs/bandeira-brasil.svg" alt=""></a></li>
+            <li><a class="dropdown-item" href="#" onclick="changeLang('en');"><img src="src/imgs/bandeira-brasil.svg" alt=""> English</a></li>
+            <li><a class="dropdown-item" href="#" onclick="changeLang('pt');"><img src="src/imgs/bandeira-brasil.svg" alt=""> Português</a></li>
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Faça seu login</a>
+          <a class="nav-link langchange" data-key="txtlogin" href="#">Faça seu login</a>
         </li>
         <li class="nav-item">
           <a class="nav-link btn btn__blue d-none d-sm-flex" href="#">Teste Grátis</a>
