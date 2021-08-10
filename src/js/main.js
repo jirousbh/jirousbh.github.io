@@ -12,10 +12,10 @@
 
       if (userLang.substr(0,2)=='pt' && appLang === null){
           appLang='pt';
-          txtLang='Português'
+          txtLang='Português';
       }else if (appLang === null) {  
           appLang='en';
-          txtLang='English'
+          txtLang='English';
       }
       localStorage.setItem('lang', appLang); // update local-storage
 
