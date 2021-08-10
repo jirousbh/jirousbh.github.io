@@ -8,12 +8,15 @@
   // run function after page load :: get/set localstorage value and run function
   document.addEventListener("DOMContentLoaded", function(event) {
       var appLang = localStorage.getItem('lang');
+      var txtLang='';
 
-      if (userLang.substr(0,2)=='pt' && appLang === null)
+      if (userLang.substr(0,2)=='pt' && appLang === null){
           appLang='pt';
-      else if (appLang === null)   
+          txtLang='Português'
+      }else if (appLang === null) {  
           appLang='en';
-      
+          txtLang='English'
+      }
       localStorage.setItem('lang', appLang); // update local-storage
 
       // fun contentUpdate function with value from local-storage - en, ru..
@@ -21,6 +24,7 @@
 
       // select radiobutton which has data-value == local storage value
      // document.querySelector('[data-value="'+appLang+'"]').checked = true;
+     document.getElementById('selectedLanguage').innerHTML='<img src="src/imgs/img-'+appLang+'.png" alt=""> '+txtLang;
   
   });
 
