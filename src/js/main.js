@@ -37,7 +37,7 @@
   function contentUpdate(cl){
      // alert(cl);
   // get language json file
-  fetch('.src/lang/'+cl+'.json')
+  fetch('src/lang/'+cl+'.json')
       .then(response=> response.json())
       .then(langJSON => {
                   // get current langage contents in array
