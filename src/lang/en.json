@@ -1,7 +1,3 @@
 {
-    "txtLogin"  : "Do your Login",
-    "title"     : "Multi Language Site",
-    "greeting"  : "Welcome to ...",
-    "subtitle"  : "This is Multi Language Site test using only javascript",
-    "flag"      : "en.png"
+    "txtLogin"  : "Do your Login"
 }

@@ -48,7 +48,7 @@
       //var currLang = [Object.keys(langJSON)][1],
       //var currLang = JSON.parse(langJSON);
       // get current language content array length
-      langCont = Object.keys(langJSON).length; //Object.entries(currLang).length;
+      langCont = document.querySelectorAll('.langchange').length; //Object.keys(langJSON).length; //Object.entries(currLang).length;
       
       //alert(langCont);
 
