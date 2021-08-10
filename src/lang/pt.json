@@ -1,6 +1,11 @@
 {
     "txtLang"   : "Português",
-    "txtLogin"  : "Faça seu Login",
+    "navFunc"   : "Funcionalidades",
+    "navWho"    : "Quem utiliza",
+    "navPlan"   : "Planos",
+    "navCont"   : "Contato",
+    "navSignin" : "Teste Grátis",
+    "navLogin"  : "Faça seu Login",
     "title"     : "Site Multi Língue",
     "greeting"  : "Bem-vindo...",
     "subtitle"  : "Esse é um teste de site Multi Língue usando somente javascript",

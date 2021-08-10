@@ -1,6 +1,11 @@
 {
     "txtLang"   : "English",
-    "txtLogin"  : "Do your Login",
+    "navFunc"   : "Features",
+    "navWho"    : "Who's using",
+    "navPlan"   : "Plans",
+    "navCont"   : "Contact",
+    "navSignin" : "Sign in",
+    "navLogin"  : "Do your Login",
     "title"     : "Multi Language Site",
     "greeting"  : "Welcome to ...",
     "subtitle"  : "This is Multi Language Site test using only javascript",
