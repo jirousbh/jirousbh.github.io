@@ -170,7 +170,7 @@
            $.each($('.periodo-item'), function(key, value) {
              var plano = $(value).data('plano');
              var preco = precos[plano] * multiplicar;
-             var preco_com_desconto = (preco - (preco / 100 * multiplicar)).toFixed(2);
+             var preco_com_desconto = (preco*(1-(desconto/100))).toFixed(2);
              $(value).find('.preco').text(preco_com_desconto);
            });
          });
