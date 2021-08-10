@@ -1,0 +1,25 @@
+.footer__acessos{
+    background: $brand-color-black;
+    padding: 45px 0;
+    border-bottom: 1px solid #2F426C;
+    ul{
+        li{
+            padding: 15px 0;
+            a{
+                color: white;
+            }
+        }
+    }
+    h6 {
+        color: white;
+        font-weight: 600;
+    }
+
+    span, a{
+        color: white;
+    }
+
+    @media (min-width: $mobile) and (max-width: $tablet) {  
+        text-align: center;
+      } 
+}

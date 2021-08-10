@@ -1,0 +1,159 @@
+.icon{
+
+    &__check{
+        background: url(../imgs/icon/icon-check.svg) center center no-repeat;
+        display: block;
+        height: 50px;
+        width: 50px;
+        box-shadow: 0px 42px 60px -10px #41456133;
+        margin: 0 8px 0 0 ;
+    }
+    &__check-green{
+        background: url(../imgs/icon/icon-check-green.svg) center center no-repeat;
+        display: block;
+        height: 30px;
+        width: 30px;
+    }
+    &__check-green-outline{
+        background: url(../imgs/icon/icon-check-green-outline.svg) center center no-repeat;
+        display: block;
+        height: 20px;
+        width: 30px;
+        margin: 0 8px 0 0;
+    }
+
+    &__numero-um{
+        background: url(../imgs/icon/icon-um.svg) center center no-repeat;
+        display: block;
+        height: 50px;
+        width: 50px;
+        margin: 0 8px 15px 0 ;
+    }
+    &__numero-dois{
+        background: url(../imgs/icon/icon-dois.svg) center center no-repeat;
+        display: block;
+        height: 50px;
+        width: 50px;
+        margin: 0 8px 15px 0 ;
+    }
+    &__numero-tres{
+        background: url(../imgs/icon/icon-tres.svg) center center no-repeat;
+        display: block;
+        height: 50px;
+        width: 50px;
+        margin: 0 8px 15px 0 ;
+    }
+    &__numero-quatro{
+        background: url(../imgs/icon/icon-quatro.svg) center center no-repeat;
+        display: block;
+        height: 50px;
+        width: 50px;
+        margin: 0 8px 15px 0 ;
+    }
+    &__funcionalidades{
+        background: url(../imgs/icon/icon-funcionalidades.svg) center center no-repeat;
+        display: block;
+        height: 50px;
+        width: 50px;
+        margin: 0 0px 54px 0 ;
+        box-shadow: 0px 16px 45px 0px #0B1F4D1A;
+    }
+    &__deshboard{
+        background: url(../imgs/icon/icon-deshboard.svg) center center no-repeat;
+        display: block;
+        height: 50px;
+        width: 50px;
+        margin: 0 0px 30px 0;
+    }
+    &__pixel{
+        background: url(../imgs/icon/icon-pixel.svg) center center no-repeat;
+        display: block;
+        height: 50px;
+        width: 50px;
+        margin: 0 0px 30px 0;
+    }
+    &__links{
+        background: url(../imgs/icon/icon-links.svg) center center no-repeat;
+        display: block;
+        height: 50px;
+        width: 50px;
+        margin: 0 0px 30px 0;
+    }
+    &__dominio{
+        background: url(../imgs/icon/icon-dominio.svg) center center no-repeat;
+        display: block;
+        height: 50px;
+        width: 50px;
+        margin: 0 0px 30px 0;
+    }
+    &__deep{
+        background: url(../imgs/icon/icon-deep-links.svg) center center no-repeat;
+        display: block;
+        height: 50px;
+        width: 50px;
+        margin: 0 0px 30px 0;
+    }
+    &__relatorio{
+        background: url(../imgs/icon/icon-relatorio.svg) center center no-repeat;
+        display: block;
+        height: 50px;
+        width: 50px;
+        margin: 0 0px 30px 0;
+    }
+    &__profile{
+        background: url(../imgs/icon/icon-profile.svg) center center no-repeat;
+        display: block;
+        height: 35px;
+        width: 35px;
+        margin: 0 15px 0 0;
+    }
+    &__chaves{
+        background: url(../imgs/icon/icon-chaves.svg) center center no-repeat;
+        display: block;
+        height: 50px;
+        width: 50px;
+        margin: 0 0px 30px 0;
+    }
+    &__garantia{
+        background: url(../imgs/icon/icon-garantia.svg) center center no-repeat;
+        display: block;
+        height: 50px;
+        width: 50px;
+        margin: 0 0px 30px 0;
+        box-shadow: 0px 16px 45px 0px #0B1F4D1A;
+    }
+    &__whatsapp{
+        background: url(../imgs/icon/icon-whatsapp.svg) center center no-repeat;
+        display: block;
+        height: 35px;
+        width: 35px;
+        margin: 0 15px 0 0;
+    }
+    &__facebook-blue{
+        background: url(../imgs/icon/icon-facebook-blue.svg) center center no-repeat;
+        display: block;
+        height: 35px;
+        width: 35px;
+        margin: 0 15px 0 0;
+    }
+    &__twiiter-blue{
+        background: url(../imgs/icon/icon-twitter-blue.svg) center center no-repeat;
+        display: block;
+        height: 35px;
+        width: 35px;
+        margin: 0 15px 0 0;
+    }
+    &__instagram-blue{
+        background: url(../imgs/icon/icon-instagram-blue.svg) center center no-repeat;
+        display: block;
+        height: 35px;
+        width: 35px;
+        margin: 0 15px 0 0;
+    }
+    &__menu{
+        background: url(../imgs/icon/icon-menu.svg) center center no-repeat;
+        display: block;
+        height: 35px;
+        width: 35px;
+    }
+}

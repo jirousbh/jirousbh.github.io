@@ -1,0 +1,522 @@
+/* Header */ 
+.header{
+    display: flex;
+    align-items: center;
+    height: 700px;
+    @media (min-width: $mobile) and (max-width: $tablet) {
+       height: auto;
+       padding: 40px 0;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+    &__display{
+       color: $brand-color-black;
+       margin: 0 0 24px 0;
+       @media (min-width: $mobile) and (max-width: $tablet) {
+           font-size: 18px;
+           line-height: 28px;
+           text-align: center;
+       }
+    }
+
+    &__subtitulo{
+        margin: 0px 0 84px 0;
+        max-width: 488px;
+        @media (min-width: $mobile) and (max-width: $tablet) {
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+            margin: 0px 0 24px 0;
+        }
+    }
+
+    &__bg-woman{
+        background: url(../imgs/icon/img-header-background-woman-desktop.png) center center no-repeat;
+        width: 100%;
+        height: 750px;
+        position: relative;
+        background-size: cover;
+
+        @media (min-width: $mobile) and (max-width: $tablet) {
+            height: 360px;
+            background: url(../imgs/icon/img-header-background-woman-mobile.png) center center no-repeat;
+        }
+    }
+    &__animation{
+        animation: 5s ease-in-out 0s infinite normal none running pulse;
+        position: absolute;
+        right: -70px;
+        top: 330px;
+        @media (min-width: $mobile) and (max-width: $tablet) {
+            left: -20px;
+            top: 180px;
+            width: 180px;
+        }
+    }
+}
+
+/* Grandes Players */
+
+.players{
+    padding: 30px 0;
+    overflow: hidden;
+
+    .swiper-container{
+        overflow: hidden;
+        padding: 15px;
+    }
+
+    &__titulo{
+        color: $brand-color-black;
+        font-weight: 600;
+        max-width: 150px;
+        display: block;
+        @media (min-width: $mobile) and (max-width: $tablet) {
+           max-width: inherit;
+        }
+    }
+
+    &__card{
+        background: white;
+        box-shadow: 0px 2px 4px 0px #0B1F4D14;
+        border-radius: $border-radius;
+        display: flex;
+        align-items: center;
+        height: 100px;
+
+        &--img{
+            width: 100px;
+            height: 83px;
+            img{
+                width: 100%;
+            }
+        }
+
+        &__conteudo{
+
+            &--titulo{
+                color: $brand-color-black!important;
+                font-weight: 600;
+                display: block;
+            }
+
+            &--canal{
+                color: $brand-color-text;
+                display: block;
+            }
+        }
+    }
+
+    /*Next Button*/
+    .icon-avancar{
+            background: url(../imgs/icon/icon-next.svg);
+            right: 0;
+            position: absolute;
+            top: 50%;
+            width: 51px;
+            height: 50px;
+            margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+            z-index: 10;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    } 
+}
+
+/* Como Funciona */
+.como-funciona{
+    margin: 132px 0;
+    @media (min-width: $mobile) and (max-width: $tablet) {  
+        margin: 32px 0; 
+    }
+    &__titulo{
+        color: $brand-color-black;
+        font-weight: 600;
+        margin: 0 0 37px 0;
+    }
+    &__texto{
+        color: $brand-color-text;
+        margin: 0 0 40px 0;
+        position: relative;
+        &::after{
+            background: url(../imgs/icon/icon-after.svg);
+            height: 5px;
+            width: 84px;
+            position: absolute;
+            content: "";
+            bottom: -20px;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+        }
+    }
+    &__subtitulo{
+        color: $brand-color-black;
+        font-weight: 600;
+        max-width: 290px;
+        margin: 0 auto;
+        
+        @media (max-width: $mobile) {
+            text-align: center;
+        }
+    }
+    &--background{
+        margin: 37px 0 0 0;
+        background: rgba(64, 112, 244, 0.04);
+        border-radius: 6px;
+        padding: 60px;
+        @media (min-width: $mobile) and (max-width: $tablet) {  
+            padding: 30px 20px;
+        }
+        figure{
+            img{
+                position: relative;
+                right: -21px;
+                width: 1060px;
+                margin: 0 auto;
+                @media (min-width: $mobile) and (max-width: $tablet) {  
+                    width: 100%;
+                    right: inherit;
+                }
+            }
+        }
+        &__card{
+            margin: 37px 0 37px 0;
+            position: relative;
+            @media (min-width: $mobile) and (max-width: $tablet) {  
+                margin: 24px 0 0 0;
+            }
+            &--white{
+                background: white;
+                box-shadow: 0px 16px 45px 0px #0B1F4D1A;
+                border-radius: $border-radius;
+                padding: 26px 46px;
+                position: absolute;
+                width: 600px;
+                @media (min-width: $mobile) and (max-width: $tablet) {  
+                    width: auto;
+                    position: relative;
+                }
+                &::before{
+                    content: '';
+                    display: block;
+                    height: 75px;
+                    width: 2px;
+                    background: $brand-color-blue;
+                    position: absolute;
+                    left: 0;
+                }
+                &__texto{
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
+        &--subtitulo{
+            font-weight: 600;
+            margin: 41px 0 41px 0;
+            @media (min-width: $mobile) and (max-width: $tablet) {  
+                margin: 0px 0 24px 0;
+            }
+        }
+        .btn__blue{
+            margin: 0 auto;
+        }
+    }
+}
+
+
+/* PARA QUEM */ 
+.para-quem{
+    margin: 176px 0;
+    @media (min-width: $mobile) and (max-width: $tablet) {  
+        margin: 32px 0;
+    }
+    &__titulo{
+        margin: 24px 0 64px 0;
+        @media (min-width: $mobile) and (max-width: $tablet) {  
+            margin: 24px 0 24px 0;
+        }
+    }
+    &__card{
+        border: 1px solid $brand-color-line;
+        border-radius: $border-radius;
+        padding: 25px;
+        margin: 17px 0;
+        height: 395px;
+        position: relative;
+        @media (min-width: $mobile) and (max-width: $tablet) {  
+            height: auto;
+        }
+        &:hover{
+            transition: ease-in 0.3s;
+            background: $brand-color-line;
+        }
+        &::before{
+            content: '';
+            display: block;
+            height: 35px;
+            width: 2px;
+            background: $brand-color-blue;
+            position: absolute;
+            left: 0;
+            bottom: 140px;
+            @media (min-width: $mobile) and (max-width: $tablet) {  
+                height: 45px;
+                bottom: 110px;
+            }
+        }
+        img{
+            width: 100%;
+            margin: 0 0 36px 0;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+    }
+}
+
+/* Funcionalidades */
+
+.funcionalidades{
+    margin: 0 0 192px 0;
+    @media (min-width: $mobile) and (max-width: $tablet) {  
+        margin: 0 0 32px 0;
+    }
+    &__card{
+        border: 1px solid $brand-color-line;
+        border-radius: $border-radius;
+        padding: 32px;
+        margin: 15px 0 36px 0;
+        position: relative;
+        min-height: 290px;
+        @media (min-width: $mobile) and (max-width: $tablet) {  
+            margin: 15px 0 0 0;
+        }
+        &::after{
+            content: '';
+            display: block;
+            height: 112px;
+            width: 2px;
+            background: $brand-color-blue;
+            position: absolute;
+            left: 0;
+            bottom: 50px;
+        }
+    }
+}
+
+/* Aplicativos */ 
+.aplicativos{
+    background: $brand-color-background-1;
+    padding: 60px 0;
+    
+    &__titulo{
+        margin: 24px 0 58px 0;
+        @media (min-width: $mobile) and (max-width: $tablet) {  
+           text-align: center;
+           margin: 24px 0 34px 0;
+        }
+    }
+
+    &__card{
+        background: white;
+        border-radius: $border-radius;
+        height: 158px;
+        padding: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 24px 0;
+        img{
+            width: 130px;
+            height: 60px;
+        }
+    }
+}
+
+/* Planos */ 
+.planos{
+    padding: 163px 0 50px 0;
+    @media (min-width: $mobile) and (max-width: $tablet) {  
+        padding: 34px 0 34px 0;
+    }
+    &__titulo{
+        max-width: 510px;
+        margin: 0 auto;
+    }
+    &__selecionar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (min-width: $mobile) and (max-width: $tablet) {  
+            flex-direction: column;
+        }
+        &-titulo{
+            font-weight: 600;
+            color: $brand-color-black;
+            margin: 0 15px 0 0;
+            @media (min-width: $mobile) and (max-width: $tablet) {  
+                margin: 0 0 15px 0;
+            }
+        }
+        &-form{
+            form{
+                border: 1px solid $brand-color-line;
+            }
+        }
+    }
+    &__card{
+        border: 1px solid $brand-color-line;
+        border-radius: $border-radius;
+        padding: 45px 39px;
+        height: 530px;
+        @media (min-width: $mobile) and (max-width: $tablet) {  
+            height: auto;
+            margin: 0 0 16px 0;
+        }
+        
+        &-tag{
+            background: $brand-color-blue;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 3px 11px;
+            border-radius: 6px;
+        }
+
+        &-preco{
+            font-size: 31px;
+            margin: 0 15px 0 0;
+            font-weight: 600;
+            color: $brand-color-black;
+        }
+
+        &-descricao{
+            ul{
+                li{
+                    margin: 0 0 16px 0;
+                    span{
+                        display: flex;
+                    }
+                }
+            }
+        }
+        &-footer{
+            margin: 48px 0 0 0;
+            a{
+                color: $brand-color-black;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+
+/* Depoimentos */ 
+.depoimentos{
+    padding: 192px 0 166px 0;
+    background: $brand-color-background-2;
+    overflow: hidden;
+    
+    @media (min-width: $mobile) and (max-width: $tablet) {  
+        padding: 34px;
+      } 
+
+    .card-depoimentos{
+        overflow: visible;
+    }
+
+    &__titulo{
+        margin:  24px 0 54px 0;
+        @media (min-width: $mobile) and (max-width: $tablet) {  
+            text-align: center;
+          } 
+    }
+
+    &__card{
+        background: white;
+        border-radius: $border-radius;
+        padding: 40px;
+        &-footer{
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.tabela{
+    &__titulo{
+        @media (min-width: $mobile) and (max-width: $tablet) {  
+          text-align: center;
+        } 
+    }
+    @media (min-width: $mobile) and (max-width: $tablet) {  
+        th{
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+}
+
+/* Garantia */ 
+.garantia{
+    padding: 120px 0 48px 0;
+
+    &__accordion{
+        &-item{
+            border-bottom: 1px solid $brand-color-line;
+            margin: 0 0 30px;
+            .accordion-button:not(.collapsed){
+                background: transparent;
+                color: $brand-color-black;
+            }
+        }
+    }
+}
+
+/* Contato */ 
+.contato{
+    background: url(../imgs/bg-contato.jpg) center right no-repeat;
+    background-size: cover;
+    padding: 85px 0;
+    height: 700px;
+    @media (min-width: $mobile) and (max-width: $tablet) {  
+       height: auto;
+       background: $brand-color-background-1;
+       padding: 34px 0;
+    } 
+    &__titulo{
+        margin: 0 0 14px 0;
+        @media (min-width: $mobile) and (max-width: $tablet) {  
+           text-align: center;
+         } 
+    }
+    &__subtitulo{
+        margin: 0 0 41px 0;
+        @media (min-width: $mobile) and (max-width: $tablet) {  
+            text-align: center;
+          } 
+    }
+
+    &__redes{
+        @media (min-width: $mobile) and (max-width: $tablet) {  
+            text-align: center;
+            &-icones{
+                justify-content: center;
+            }
+        }
+    }
+}

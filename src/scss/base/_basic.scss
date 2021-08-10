@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Sora:wght@600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+}
+
+html,
+body,
+button {
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+a,
+a:focus,
+a:hover {
+  text-decoration: none;
+  outline: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.container {
+  // max-width: 1408px;
+}
+
+.display-heading{
+  font-size: 39px;
+  line-height: 49px;
+  font-family: 'Sora', sans-serif;
+  color: $brand-color-black;
+  @media (max-width: $tablet) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+h1 {
+  font-size: 31px;
+  line-height: 41px;
+  font-family: 'Sora', sans-serif;
+  color: $brand-color-black;
+}
+
+h2 {
+  font-size: 25px;
+  line-height: 35px;
+  font-family: 'Sora', sans-serif;
+  color: $brand-color-black;
+  @media (max-width: $mobile) {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 28px;
+  font-family: 'Sora', sans-serif;
+  color: $brand-color-black;
+  @media (max-width: $mobile) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.overline{
+  font-size: 14px;
+  color: $brand-color-green;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 600;
+  display: block;
+  @media (max-width: $mobile) {
+    text-align: center;
+  } 
+}
+
+p,
+span, 
+label,th,tr {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Open Sans', sans-serif;
+  color: $brand-color-text;
+  font-weight: 400;
+  @media (max-width: $mobile) {
+    font-size: 14px;
+  }
+}
