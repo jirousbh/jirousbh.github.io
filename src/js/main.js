@@ -1,3 +1,6 @@
+  
+  
+  
   //test navigator language
 
   var userLang = navigator.language || navigator.userLanguage; 
@@ -128,8 +131,8 @@
       clickable: true,
     },
     autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
+      delay: 10000,
+      disableOnInteraction: true,
     },
     navigation: {
       nextEl: ".icon-avancar",
