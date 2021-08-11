@@ -7,6 +7,7 @@
 
   // run function after page load :: get/set localstorage value and run function
   document.addEventListener("DOMContentLoaded", function(event) {
+
       var appLang = localStorage.getItem('lang');
 
       if (userLang.substr(0,2)=='pt' && appLang === null){
@@ -151,6 +152,38 @@
         }
       }
    });
+
+   function changePlan(element){
+
+    //change class active
+    $.each($('.selectPlanoption'), function(key, value) {
+      $(value).attr('class','btn btn__blue selectPlanoption');
+
+    });
+
+    $(element).attr('class','btn btn__blue--active selectPlanoption');
+
+      var precos = {
+        1: 99.00,
+        2: 189.00,
+        3: 499.00,
+      };
+      var multiplicar = $(element).data('multiplicar');
+      var desconto = $(element).data('desconto');
+
+      $.each($('.periodo-item'), function(key, value) {
+        var plano = $(value).data('plano');
+        var preco = precos[plano] * multiplicar;
+        var preco_com_desconto = (preco*(1-(desconto/100))).toFixed(2);
+        var preco_mensal_com_desconto =(precos[plano]*(1-(desconto/100))).toFixed(2);
+        if (desconto==0)
+          $(value).find('.my-4').html('<h2 class="planos__card-preco">R$ <span class="planos__card-preco preco">'+preco_com_desconto.replace('.',',')+'</span></h2>');
+        else{
+          $(value).find('.my-4').html('<span class="planos__card-desconto">R$ '+precos[plano].toFixed(2).replace('.',',')+'</span><h2 class="planos__card-preco">R$ <span class="planos__card-preco preco">'+preco_mensal_com_desconto.replace('.',',')+'*</span></h2><span class="planos__card-cobrado">*cobrado <strong>R$ '+preco_com_desconto.replace('.',',')+'</strong> automaticamente a cada '+multiplicar+' meses.</span>');
+        }
+      });
+
+   }
 
     //    CALCULAR VALORES PLANOS
    $(function() {

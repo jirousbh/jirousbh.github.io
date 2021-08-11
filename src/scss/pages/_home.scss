@@ -59,7 +59,7 @@
         right: -70px;
         top: 330px;
         @media (min-width: $mobile) and (max-width: $tablet) {
-            left: -20px;
+            right: -20px;
             top: 180px;
             width: 180px;
         }
@@ -358,31 +358,65 @@
         margin: 0 auto;
     }
     &__selecionar{
-        display: flex;
-        justify-content: center;
-        align-items: center;
         @media (min-width: $mobile) and (max-width: $tablet) {  
             flex-direction: column;
         }
         &-titulo{
             font-weight: 600;
             color: $brand-color-black;
-            margin: 0 15px 0 0;
+            margin: 0 15px 15px 0;
+            text-align: center;
             @media (min-width: $mobile) and (max-width: $tablet) {  
                 margin: 0 0 15px 0;
             }
         }
         &-form{
-            form{
-                border: 1px solid $brand-color-line;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .btn__blue{
+                height: 40px;
+                width: auto;
+                border-radius: 16px;
+                border: 0;
+                background: #e4f1ff;
+                color: #2a7ddb;
+                    &:hover{
+                        border: 0;
+                        background: $brand-color-black;
+                        color: white;
+                    }
+                    @media (min-width: $mobile) and (max-width: $tablet) {
+                       margin: 0 8px 0 0; 
+                    }
+            }
+            .btn__blue--active{
+                height: 40px;
+                width: auto;
+                border-radius: 16px;
+                border: 0;
+                background: $brand-color-blue;
+                color: white;
+                margin: 0 15px 0 0;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                @media (min-width: $mobile) and (max-width: $tablet) {
+                    margin: 0 8px 0 0; 
+                 }
+                 &:hover{
+                    background: $brand-color-black;
+                    color: white;
+                 }
             }
         }
     }
     &__card{
+
         border: 1px solid $brand-color-line;
         border-radius: $border-radius;
         padding: 45px 39px;
-        height: 530px;
+        height: 100%;
         @media (min-width: $mobile) and (max-width: $tablet) {  
             height: auto;
             margin: 0 0 16px 0;
@@ -399,9 +433,26 @@
 
         &-preco{
             font-size: 31px;
-            margin: 0 15px 0 0;
+            margin: 0 15px 8px 0;
             font-weight: 600;
             color: $brand-color-black;
+        }
+        &-desconto{
+            color: $brand-color-text;
+            display: block;
+            margin: 0 0 8px 0;
+            position: relative;
+            font-weight: 600;
+            &:before{
+                content:'';
+                height: 2px;
+                width: 90px;
+                display: block;
+                position: absolute;
+                background: red;
+                top: 11px;
+                left: -2px;
+            }
         }
 
         &-descricao{

@@ -665,11 +665,9 @@
                         <span><strong>Selecione o período de cobrança</strong></span>
                     </div>
                     <div class="planos__selecionar-form">
-                        <select id="periodo" class="form-select">
-                            <option data-desconto="0" data-multiplicar="1" value="1">Mensal</option>
-                            <option data-desconto="6" data-multiplicar="6" value="2">Semestral 6% desc.</option>
-                            <option data-desconto="12" data-multiplicar="12" value="3">Anual 12% desc.</option>
-                        </select>
+                        <button class="btn btn__blue--active selectPlanoption" data-desconto="0" data-multiplicar="1" onClick="changePlan(this);">Mensal</button>
+                        <button  class="btn btn__blue selectPlanoption" data-desconto="6" data-multiplicar="6" value="2" onClick="changePlan(this);">Semestral</button>
+                        <button class="btn btn__blue selectPlanoption" data-desconto="12" data-multiplicar="12" value="2" onClick="changePlan(this);">Anual</button>
                     </div>
                 </div>
             </div>
@@ -681,8 +679,10 @@
                     <div class="planos__card periodo-item" data-plano="1"  data-aos="fade-up">
                         <h2>Starter</h3>
                         <span>Dê os primeiros passoas, análise seus engajamentos de um jeito fácil.</span>
-                        <div class="d-flex my-4">
-                            <h2 class="planos__card-preco">R$ <span class="planos__card-preco preco"></span></h2>
+                        <div class="my-4">
+                            <!--<span class="planos__card-desconto">R$ 15,00</span>-->
+                            <h2 class="planos__card-preco">R$ <span class="planos__card-preco preco">99,00</span></h2>
+                            <!--<span class="planos__card-cobrado">*cobrado <strong>R$ 221,18</strong> automaticamente a cada 3 meses.</span>-->
                         </div>
                         <a href="" class="btn btn__assinar">Teste Grátis</a>
                         <div class="planos__card-descricao">
@@ -701,8 +701,8 @@
                     <div class="planos__card periodo-item" data-plano="2"  data-aos="fade-up">
                         <h2>Professional <span class="planos__card-tag">Recomendado</span></h3>
                         <span>Dê os primeiros passoas, análise seus engajamentos de um jeito fácil.</span>
-                        <div class="d-flex my-4">
-                        <h2 class="planos__card-preco">R$ <span class="planos__card-preco preco"></span></h2>
+                        <div class="my-4">
+                        <h2 class="planos__card-preco">R$ <span class="planos__card-preco preco">189,00</span></h2>
                         </div>
                         <a href="" class="btn btn__assinar">Teste Grátis</a>
                         <div class="planos__card-descricao">
@@ -722,8 +722,8 @@
                     <div class="planos__card periodo-item" data-plano="3"  data-aos="fade-up">
                         <h2>Enterprise</h2>
                         <span>Dê os primeiros passoas, análise seus engajamentos de um jeito fácil.</span>
-                        <div class="d-flex my-4">
-                        <h2 class="planos__card-preco">R$ <span class="planos__card-preco preco"></span></h2>
+                        <div class="my-4">
+                        <h2 class="planos__card-preco">R$ <span class="planos__card-preco preco">499,00</span></h2>
                         </div>
                         <a href="" class="btn btn__assinar">Teste Grátis</a>
                         <div class="planos__card-descricao">
