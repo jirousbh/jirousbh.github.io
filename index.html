@@ -49,6 +49,36 @@
 
   <!-- Título -->
   <title>AppClick - Feito Pra Você Crescer</title>
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-201513121-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-201513121-1');
+</script>
+
+    <!-- Facebook Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '558239321841206');
+    fbq('track', 'PageView');
+</script>
+<noscript>
+        <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=558239321841206&ev=PageView&noscript=1"
+    />
+</noscript>
+    <!-- End Facebook Pixel Code -->
 
 </head>
 
@@ -232,14 +262,14 @@
                 <div class="col-md-4">
                     <div class="como-funciona--background__card"  >
                         <i class="icon__numero-tres"></i>
-                        <p>Você identifique os melhores canais de conversão desde o 1º clique e aumente a sua receita;
+                        <p>O usuário seja redirecionado ao aplicativo e caso já esteja logado na conta, a conversão aumenta consideravelmente;
                         </p>
                     </div>
                 </div>
                 <div class="col-md-4" >
                     <div class="como-funciona--background__card" >
                         <i class="icon__numero-quatro"></i>
-                        <p>Você identifique os melhores canais de conversão desde o 1º clique e aumente a sua receita;
+                        <p>Você identifica os melhores canais de conversão desde o 1º clique e aumente a sua receita;
                         </p>
                     </div>
                 </div>
@@ -476,7 +506,7 @@
             <div class="col-md-6 text-sm-end text-center">
                 <span><strong>Não encontrou o aplicativo que você utiliza?</strong></span>
                 <p>Entre em contato com a gente e sugira essa integração 😎</p>
-                <a href="" class="btn btn__contato">Entre em contato</a>
+                <a href="https://clico.link/whatsapp/appclick" onClick="gtag_report_contact_conversion()" target="_blank" class="btn btn__contato">Entre em contato</a>
             </div>
             <!-- Youtube -->
             <div class="col-md-2 col-6">
@@ -678,7 +708,7 @@
                 <div class="col-md-4">
                     <div class="planos__card periodo-item" data-plano="1"  data-aos="fade-up">
                         <h2>Starter</h3>
-                        <span>Dê os primeiros passoas, análise seus engajamentos de um jeito fácil.</span>
+                        <!--<span>Dê os primeiros passoas, análise seus engajamentos de um jeito fácil.</span>-->
                         <div class="my-4">
                             <!--<span class="planos__card-desconto">R$ 15,00</span>-->
                             <h2 class="planos__card-preco">R$ <span class="planos__card-preco preco">99,00</span></h2>
@@ -700,7 +730,7 @@
              <div class="col-md-4">
                     <div class="planos__card periodo-item" data-plano="2"  data-aos="fade-up">
                         <h2>Professional <span class="planos__card-tag">Recomendado</span></h3>
-                        <span>Dê os primeiros passoas, análise seus engajamentos de um jeito fácil.</span>
+                        <!--<span>Dê os primeiros passoas, análise seus engajamentos de um jeito fácil.</span>-->
                         <div class="my-4">
                         <h2 class="planos__card-preco">R$ <span class="planos__card-preco preco">189,00</span></h2>
                         </div>
@@ -721,7 +751,7 @@
               <div class="col-md-4">
                     <div class="planos__card periodo-item" data-plano="3"  data-aos="fade-up">
                         <h2>Enterprise</h2>
-                        <span>Dê os primeiros passoas, análise seus engajamentos de um jeito fácil.</span>
+                        <!--<span>Dê os primeiros passoas, análise seus engajamentos de um jeito fácil.</span>-->
                         <div class="my-4">
                         <h2 class="planos__card-preco">R$ <span class="planos__card-preco preco">499,00</span></h2>
                         </div>
@@ -915,6 +945,27 @@
                         </div>
                     </div>
                     <!-- CARD DEPOIMENTO -->
+                    <div class="swiper-slide">
+                        <div class="depoimentos__card">
+                            <i class="icon__chaves"></i>
+                            <p>O AppClick foi o ponto de virada do nosso negocio...
+
+                                O fato dele redirecionar a pessoa direto para o aplicativo onde ela já está logada aumentou muito o engajamento de todos os nossos eventos.
+                                
+                                A equipe de desenvolvimento é totalmente atenciosa e, além de sempre ouvir nossas sugestões, eles também implementam o que precisamos.
+                                
+                                Essa ferramenta, apesar de ter um conceito muito simples, faz uma grande diferença no negocio. Ela com certeza pode ser a virada de chave que você precisa no seu projeto.</p>
+                            <div class="depoimentos__card-footer">
+                                <div class="depoimentos__card-footer-icon">
+                                    <i class="icon__profile"></i>
+                                </div>
+                                <div class="depoimentos__card-footer-nome">
+                                    <h3>Daniel - Gerente Op.
+                                        Ei Nerd</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                    
                 </div>
             </div>
@@ -1083,7 +1134,7 @@
             <div class="col-md-4">
                 <h2 class="contato__titulo">Precisa de ajuda?</h2>
                 <h3 class="contato__subtitulo">Podemos ajudá-lo a decidir o que é melhor para sua empresa.</h3>
-                <a href="https://clico.link/whatsapp/appclick" class="btn btn__whatsapp"><i class="icon__whatsapp"></i> Entrar em contato via WhatsApp</a>
+                <a href="https://clico.link/whatsapp/appclick" target="_blank" onClick="gtag_report_contact_conversion()" class="btn btn__whatsapp"><i class="icon__whatsapp"></i> Entrar em contato via WhatsApp</a>
                 <div class="contato__redes">
                 <h3>Siga-nos</h3>
                     <div class="d-flex contato__redes-icones">
@@ -1184,6 +1235,7 @@
  <script>
 
   AOS.init();
+
 
 </script>
 

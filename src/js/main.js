@@ -1,4 +1,15 @@
-  
+function gtag_report_contact_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-339424182/k9CyCNbA1-oCELbn7KEB',
+      'event_callback': callback
+  });
+  return false;
+}
   
   
   //test navigator language
@@ -24,8 +35,8 @@
 
       localStorage.setItem('lang', appLang); // update local-storage
 
-      // fun contentUpdate function with value from local-storage - en, ru..
-      contentUpdate(appLang); 
+      // contentUpdate function with value from local-storage - en, ru..
+      //contentUpdate(appLang); 
 
       // select radiobutton which has data-value == local storage value
      // document.querySelector('[data-value="'+appLang+'"]').checked = true;
@@ -54,6 +65,7 @@
       //var currLang = JSON.parse(langJSON);
 
       // set languange menu
+      if (document.getElementById('selectedLanguage'))
       document.getElementById('selectedLanguage').innerHTML='<img src="src/imgs/img-'+cl+'.png" alt="" /> '+langJSON['txtLang'];
 
 
