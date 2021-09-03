@@ -24,19 +24,21 @@ function gtag_report_contact_conversion(url) {
 
       var appLang = localStorage.getItem('lang');
 
+      
+
       if (userLang.substr(0,2)=='pt' && appLang === null){
           appLang='pt';
-          txtLang='Português';
+
       }else if (appLang === null) {  
           appLang='en';
-          txtLang='English';
+
       }
 
 
       localStorage.setItem('lang', appLang); // update local-storage
 
       // contentUpdate function with value from local-storage - en, ru..
-      //contentUpdate(appLang); 
+      contentUpdate(appLang); 
 
       // select radiobutton which has data-value == local storage value
      // document.querySelector('[data-value="'+appLang+'"]').checked = true;
@@ -82,7 +84,8 @@ function gtag_report_contact_conversion(url) {
 
       // test if the selector is image
       if(getSelector.nodeName.toLowerCase() === 'img'){
-          getSelector.src='src/img/'+langJSON[getAttr];
+          getSelector.src='src/imgs/'+langJSON[getAttr];
+          //alert(getAttr);
       }else{
       // assign the data-key value from current language array to the .langchange[data-key] selector
       getSelector.innerHTML = langJSON[getAttr];
@@ -191,10 +194,17 @@ function gtag_report_contact_conversion(url) {
         var preco = precos[plano] * multiplicar;
         var preco_com_desconto = (preco*(1-(desconto/100))).toFixed(2);
         var preco_mensal_com_desconto =(precos[plano]*(1-(desconto/100))).toFixed(2);
-        if (desconto==0)
-          $(value).find('.my-4').html('<h2 class="planos__card-preco">R$ <span class="planos__card-preco preco">'+preco_com_desconto.replace('.',',')+'</span></h2>');
-        else{
-          $(value).find('.my-4').html('<span class="planos__card-desconto">R$ '+precos[plano].toFixed(2).replace('.',',')+'</span><h2 class="planos__card-preco">R$ <span class="planos__card-preco preco">'+preco_mensal_com_desconto.replace('.',',')+'*</span></h2><span class="planos__card-cobrado">*cobrado <strong>R$ '+preco_com_desconto.replace('.',',')+'</strong> automaticamente a cada '+multiplicar+' meses.</span>');
+        if (desconto==0){
+          $(value).find('.planos__card-desconto').hide();
+          $(value).find('.planos__card-cobrado').hide();
+          $(value).find('.preco').html(preco_com_desconto.replace('.',','));
+        }else{
+          $(value).find('.planos__card-desconto').html(precos[plano].toFixed(2).replace('.',','));
+          $(value).find('.planos__card-desconto').show();
+          $(value).find('.preco').html(preco_mensal_com_desconto.replace('.',','));
+          $(value).find('.preco_cobrado').html(preco_com_desconto.replace('.',','));
+          $(value).find('.preco_periodo').html(multiplicar);
+          $(value).find('.planos__card-cobrado').show();
         }
       });
 
